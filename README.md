@@ -17,6 +17,7 @@ We have decided to use a free 30-day trial of LeanKit to track and plan project 
 ### Authors
 
 * **Michael Bilan** - *Initial Commit/Work*
+* **Bryant Klug**
 
 All project contributors can be a the [project contributors page](https://github.com/mabilan/CS372-Proj1/graphs/contributors).
 
