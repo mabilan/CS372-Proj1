@@ -1,0 +1,6 @@
+8 Feb 2019 [Approx. 1.5 hrs]
+- Updated README.md with leankit planning board address
+- Added <Name>Diary.txt files for project members
+- Added all planned tasks to leankit board
+- Grouped tasks by milestones according to planning session
+- Updated README.md with appropriate structure and markdown
