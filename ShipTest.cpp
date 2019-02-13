@@ -5,6 +5,9 @@
 #include "catch.hpp"
 #include "Ship.h"
 
-TEST_CASE("We can make a ship."){
-    REQUIRE_NOTHROW(Ship testShip);
+TEST_CASE("Testing the ship class."){
+    Ship testShip;
+
+    REQUIRE(testShip.getName() == "");
+    REQUIRE(testShip.getName() == "yes");
 }

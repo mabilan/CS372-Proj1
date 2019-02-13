@@ -5,9 +5,15 @@
 #ifndef CS372_PROJ1_SHIP_H
 #define CS372_PROJ1_SHIP_H
 
+#include <string>
 
 class Ship {
-
+public:
+    std::string &getName() {
+        return _name;
+    }
+private:
+    std::string _name;
 };
 
 
