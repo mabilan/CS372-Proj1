@@ -10,7 +10,7 @@ TEST_CASE("Testing the ship class."){
 
     SECTION("Ships have names"){
         INFO("Check default name is empty-string");
-        REQUIRE(testShip.getName() == "");
+        REQUIRE(testShip.getName().empty());
     }
 
     SECTION("Ships can change names."){
