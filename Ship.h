@@ -12,6 +12,10 @@ public:
     std::string &getName() {
         return _name;
     }
+
+    void setName(std::string  const &newName){
+        _name = newName;
+    }
 private:
     std::string _name;
 };

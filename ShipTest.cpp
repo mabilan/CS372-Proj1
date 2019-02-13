@@ -8,6 +8,14 @@
 TEST_CASE("Testing the ship class."){
     Ship testShip;
 
-    REQUIRE(testShip.getName() == "");
-    REQUIRE(testShip.getName() == "yes");
+    SECTION("Ships have names"){
+        INFO("Check default name is empty-string")
+        REQUIRE(testShip.getName() == "");
+    }
+
+    SECTION("Ships can change names."){
+        INFO("Change default name to Frank.");
+        testShip.setName("Frank");
+        REQUIRE(testShip.getName() == "Frank");
+    }
 }
