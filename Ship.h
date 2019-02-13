@@ -9,20 +9,23 @@
 
 class Ship {
 public:
+    Ship(){
+        _name = "Battleship";
+        _size = 4;
+    }
+
     std::string &getName() {
         return _name;
     }
-
     void setName(std::string  const &newName){
         _name = newName;
     }
-
     int &getSize(){
         return _size;
     }
 private:
     std::string _name;
-    int _size = 1;
+    int _size;
 };
 
 
