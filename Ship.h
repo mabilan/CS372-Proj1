@@ -16,8 +16,13 @@ public:
     void setName(std::string  const &newName){
         _name = newName;
     }
+
+    int &getSize(){
+        return _size;
+    }
 private:
     std::string _name;
+    int _size = 1;
 };
 
 

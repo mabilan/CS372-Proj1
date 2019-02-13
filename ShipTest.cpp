@@ -9,7 +9,7 @@ TEST_CASE("Testing the ship class."){
     Ship testShip;
 
     SECTION("Ships have names"){
-        INFO("Check default name is empty-string")
+        INFO("Check default name is empty-string");
         REQUIRE(testShip.getName() == "");
     }
 
@@ -17,5 +17,10 @@ TEST_CASE("Testing the ship class."){
         INFO("Change default name to Frank.");
         testShip.setName("Frank");
         REQUIRE(testShip.getName() == "Frank");
+    }
+
+    SECTION("Ships should have a size greater than 0."){
+        INFO("Check defalt ship size is 1.");
+        REQUIRE(testShip.getSize() == 1);
     }
 }
