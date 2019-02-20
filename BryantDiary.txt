@@ -1,0 +1,9 @@
+2/8/2019 ~1.5 hours
+ - Pair programmed with Mike
+ - Set up development environment on Mike's computer
+ - Set up testing framework Catch2
+ - Started testing and making the ship class
+
+2/16-2/21 ~1 hour
+ - Set up development environment on Bryant's computer
+
