@@ -1,6 +1,6 @@
 // Ship.h
 // Created by Michael Bilan and Bryant Klug on 2/12/2019.
-// Last Modified: 2/12/2019
+// Last Modified: 2/20/2019
 
 #ifndef CS372_PROJ1_SHIP_H
 #define CS372_PROJ1_SHIP_H
@@ -20,7 +20,7 @@ public:
         _size = 4;
         _position.resize(_size);
         for(int n = 0; n < _size; ++n){
-            coordinate newPos = { 1 + n, 'A'};
+            coordinate newPos = { 1, static_cast<char>('A' + n)};
             _position[n] = newPos;
         }
     }

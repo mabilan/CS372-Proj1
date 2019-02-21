@@ -1,11 +1,11 @@
 // ShipTest.cpp for testing the ship class
 // Created by Michael Bilan & Bryant Klug on 2/12/2019.
-// Last Updated: 2/12/2019
+// Last Updated: 2/20/2019
 
 #include "catch.hpp"
 #include "Ship.h"
 
-TEST_CASE("Testing the ship class."){
+TEST_CASE("Testing the ship class.","[ship]"){
     Ship testShip;
 
     SECTION("Ships have default names"){
