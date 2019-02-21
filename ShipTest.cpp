@@ -26,4 +26,9 @@ TEST_CASE("Testing the ship class."){
     SECTION("Ships know their position on the board"){
         REQUIRE_FALSE(testShip.getPosition().empty());
     }
+    SECTION("Ships default to have the first position to be '1,A'"){
+        REQUIRE( testShip.getPosition(0).x == 1);
+        REQUIRE( testShip.getPosition(0).y == 'A');
+    }
+
 }
