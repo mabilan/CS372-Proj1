@@ -19,6 +19,10 @@ public:
         _name = "Battleship";
         _size = 4;
         _position.resize(_size);
+        for(int n = 0; n < _size; ++n){
+            coordinate newPos = { 1 + n, 'A'};
+            _position[n] = newPos;
+        }
     }
 
     std::string &getName() {
@@ -32,6 +36,9 @@ public:
     }
     std::vector<coordinate> getPosition() {
         return _position;
+    }
+    coordinate getPosition(int x) {
+        return _position[x];
     }
 private:
     std::string _name;
