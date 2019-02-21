@@ -6,12 +6,19 @@
 #define CS372_PROJ1_SHIP_H
 
 #include <string>
+#include <vector>
+
+struct coordinate{
+    int x;
+    char y;
+};
 
 class Ship {
 public:
     Ship(){
         _name = "Battleship";
         _size = 4;
+        _position.resize(_size);
     }
 
     std::string &getName() {
@@ -23,9 +30,13 @@ public:
     int &getSize(){
         return _size;
     }
+    std::vector<coordinate> getPosition() {
+        return _position;
+    }
 private:
     std::string _name;
     int _size;
+    std::vector<coordinate> _position;
 };
 
 
