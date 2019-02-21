@@ -30,5 +30,16 @@ TEST_CASE("Testing the ship class."){
         REQUIRE( testShip.getPosition(0).x == 1);
         REQUIRE( testShip.getPosition(0).y == 'A');
     }
+    SECTION("Ships default be positioned vertically"){
+        INFO("All x's will be 1, y's will increase from A to D");
+        REQUIRE( testShip.getPosition(0).x == 1);
+        REQUIRE( testShip.getPosition(0).y == 'A');
+        REQUIRE( testShip.getPosition(1).x == 1);
+        REQUIRE( testShip.getPosition(1).y == 'B');
+        REQUIRE( testShip.getPosition(2).x == 1);
+        REQUIRE( testShip.getPosition(2).y == 'C');
+        REQUIRE( testShip.getPosition(3).x == 1);
+        REQUIRE( testShip.getPosition(3).y == 'D');
+    }
 
 }
