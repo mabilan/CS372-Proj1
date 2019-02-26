@@ -12,3 +12,8 @@
 - Started building tests for Ship class
 	- Started building Ship class to pass tests
 - Learned how to fix/undo bad git commits
+
+13 Feb 2019 [Approx. 1 hr]
+- Generalize member defaults for ship class
+- Add default constructor for Ship
+- Refactor tests for member defaults
