@@ -23,6 +23,10 @@ TEST_CASE("Testing the ship class.","[ship]"){
         testShip.setName("TestShip");
         REQUIRE(testShip.getName() == "TestShip");
     }
+    SECTION("Ships can be assigned names at creation"){
+        Ship testerShip("Tester Ship");
+        REQUIRE(testerShip.getName() == "Tester Ship");
+    }
     SECTION("Ships know their position on the board"){
         REQUIRE_FALSE(testShip.getPosition().empty());
     }

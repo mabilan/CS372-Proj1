@@ -15,9 +15,8 @@ struct coordinate{
 
 class Ship {
 public:
-    Ship(){
-        _name = "Battleship";
-        _size = 4;
+    Ship(std::string name = "Battleship", int size = 4)
+         : _name(name), _size(size){
         _position.resize(_size);
         for(int n = 0; n < _size; ++n){
             coordinate newPos = { 1, static_cast<char>('A' + n)};
@@ -47,5 +46,8 @@ private:
 };
 
 class PatrolBoat : public Ship{
+public:
+    PatrolBoat() : Ship("Patrol Boat", 2){
+    }
 };
 #endif //CS372_PROJ1_SHIP_H
