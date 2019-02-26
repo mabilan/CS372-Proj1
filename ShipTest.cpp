@@ -23,7 +23,7 @@ TEST_CASE("Testing the ship class.","[ship]"){
         testShip.setName("TestShip");
         REQUIRE(testShip.getName() == "TestShip");
     }
-    SECTION("Ships can be assigned names at creation"){
+    SECTION("Ships have a name-only constructor"){
         Ship testConstructorOne("Test Ship");
         REQUIRE(testConstructorOne.getName() == "Test Ship");
         REQUIRE(testConstructorOne.getID() == 'T');
@@ -43,30 +43,35 @@ TEST_CASE("Testing the ship class.","[ship]"){
 
 }
 
-TEST_CASE("Testing the default ships for battleship"){
-    SECTION()
-    PatrolBoat testPatrol;
-    REQUIRE(testPatrol.getName() == "Patrol Boat");
-    REQUIRE(testPatrol.getSize() == 2);
-
-    Submarine testSub;
-
-    REQUIRE(testSub.getName() == "Submarine");
-    REQUIRE(testSub.getSize() == 3);
-
-    Destroyer testDestroyer;
-
-    REQUIRE(testDestroyer.getName() == "Destroyer");
-    REQUIRE(testDestroyer.getSize() == 3);
-
-    Battleship testBattle;
-
-    REQUIRE(testBattle.getName() == "Battleship");
-    REQUIRE(testBattle.getSize() == 4);
-
-    Carrier testCarrier;
-
-    REQUIRE(testCarrier.getName() == "Carrier");
-    REQUIRE(testCarrier.getSize() == 5);
-
+TEST_CASE("Testing all derived ship classes") {
+    SECTION("Testing Patrol Boat") {
+        PatrolBoat testPatrol;
+        REQUIRE(testPatrol.getName() == "Patrol Boat");
+        REQUIRE(testPatrol.getSize() == 2);
+        REQUIRE(testPatrol.getID() == 'P');
+    }
+    SECTION("Testing Submarine"){
+        Submarine testSub;
+        REQUIRE(testSub.getName() == "Submarine");
+        REQUIRE(testSub.getSize() == 3);
+        REQUIRE(testSub.getID() == 'S');
+    }
+    SECTION("Testing Destroyer"){
+        Destroyer testDestroyer;
+        REQUIRE(testDestroyer.getName() == "Destroyer");
+        REQUIRE(testDestroyer.getSize() == 3);
+        REQUIRE(testDestroyer.getID() == 'D');
+    }
+    SECTION("Testing Battleship") {
+        Battleship testBattle;
+        REQUIRE(testBattle.getName() == "Battleship");
+        REQUIRE(testBattle.getSize() == 4);
+        REQUIRE(testBattle.getID() == 'B');
+    }
+    SECTION("Testing Carrier") {
+        Carrier testCarrier;
+        REQUIRE(testCarrier.getName() == "Carrier");
+        REQUIRE(testCarrier.getSize() == 5);
+        REQUIRE(testCarrier.getID() == 'C');
+    }
 }

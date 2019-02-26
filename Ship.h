@@ -18,7 +18,7 @@ public:
         _id = ' ';
     }
 
-    explicit Ship(std::string name): _name(std::move(name)), _size(0), _id('U'){}
+    explicit Ship(std::string name): _name(std::move(name)), _size(0), _id(_name.at(0)){}
 
     explicit Ship(std::string name, int size): _name(std::move(name)), _size(size), _id(_name.at(0)){}
 
