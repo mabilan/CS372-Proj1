@@ -53,25 +53,25 @@ public:
 
 class Submarine : public Ship{
 public:
-    Submarine() : Ship("Patrol Boat", 2){
+    Submarine() : Ship("Submarine", 3){
     }
 };
 
 class Destroyer : public Ship{
 public:
-    Destroyer() : Ship("Patrol Boat", 2){
+    Destroyer() : Ship("Destroyer", 3){
     }
 };
 
 class Battleship : public Ship{
 public:
-    Battleship() : Ship("Patrol Boat", 2){
+    Battleship() : Ship("Battleship", 4){
     }
 };
 
 class Carrier : public Ship{
 public:
-    Carrier() : Ship("Patrol Boat", 2){
+    Carrier() : Ship("Carrier", 5){
     }
 };
 
