@@ -1,21 +1,23 @@
 // Gameboard.h
-// Created on 2/20/2019 by Bryant Klug
-//  last updated 2/20/2019
+// Created on 2/20/2019 by Michale Bilan & Bryant Klug
+// Last Modified: 2/26/2019
 
 #ifndef GAMEBOARD_H_INCLUDED
 #define GAMEBOARD_H_INCLUDED
 
+
 class Gameboard{
 public:
-    Gameboard(){
-        _height = 10;
-        _width = 10;
-    }
+    Gameboard(): _height(10), _width(10){};
 
-    int getHeight(){
+    explicit Gameboard(int sideLength): _height(sideLength), _width(sideLength){};
+
+    explicit Gameboard(int height, int width): _height(height), _width(width){};
+
+    const int getHeight(){
         return _height;
     }
-    int getWidth(){
+    const int getWidth(){
         return _width;
     }
     void setWidth(int w){
@@ -26,7 +28,6 @@ public:
     }
 private:
     int _height, _width;
-
 };
 
 #endif
