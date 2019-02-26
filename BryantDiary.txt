@@ -7,3 +7,6 @@
 2/16-2/21 ~1 hour
  - Set up development environment on Bryant's computer
 
+2/22 ~3 hours
+ - Added positioning to ships
+ - created the Gameboard class
