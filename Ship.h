@@ -50,4 +50,29 @@ public:
     PatrolBoat() : Ship("Patrol Boat", 2){
     }
 };
+
+class Submarine : public Ship{
+public:
+    Submarine() : Ship("Patrol Boat", 2){
+    }
+};
+
+class Destroyer : public Ship{
+public:
+    Destroyer() : Ship("Patrol Boat", 2){
+    }
+};
+
+class Battleship : public Ship{
+public:
+    Battleship() : Ship("Patrol Boat", 2){
+    }
+};
+
+class Carrier : public Ship{
+public:
+    Carrier() : Ship("Patrol Boat", 2){
+    }
+};
+
 #endif //CS372_PROJ1_SHIP_H

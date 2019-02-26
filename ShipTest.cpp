@@ -52,4 +52,26 @@ TEST_CASE("Testing the default ships for battleship"){
     PatrolBoat testPatrol;
 
     REQUIRE(testPatrol.getName() == "Patrol Boat");
+    REQUIRE(testPatrol.getSize() == 2);
+
+    Submarine testSub;
+
+    REQUIRE(testSub.getName() == "Submarine");
+    REQUIRE(testSub.getSize() == 3);
+
+    Destroyer testDestroyer;
+
+    REQUIRE(testDestroyer.getName() == "Destroyer");
+    REQUIRE(testDestroyer.getSize() == 3);
+
+    Battleship testBattle;
+
+    REQUIRE(testBattle.getName() == "Battleship");
+    REQUIRE(testBattle.getSize() == 4);
+
+    Carrier testCarrier;
+
+    REQUIRE(testCarrier.getName() == "Carrier");
+    REQUIRE(testCarrier.getSize() == 5);
+
 }
