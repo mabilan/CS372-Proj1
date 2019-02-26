@@ -18,6 +18,12 @@ public:
     int getWidth(){
         return _width;
     }
+    void setWidth(int w){
+        _width = w;
+    }
+    void setHeight(int h){
+        _height = h;
+    }
 private:
     int _height, _width;
 
