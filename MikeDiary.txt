@@ -17,3 +17,9 @@
 - Generalize member defaults for ship class
 - Add default constructor for Ship
 - Refactor tests for member defaults
+
+26 Feb 2019 [Approx. 1.5 hrs]
+- Revised tests for ship base class per developer discussions
+- Revised ship base class to pass refactored tests
+- Added new tests for varying constructors
+- Revised ship class to pass new constructor tests

@@ -8,14 +8,14 @@
 TEST_CASE("Testing the ship class.","[ship]"){
     Ship testShip;
 
-    SECTION("Ships have default names"){
-        INFO("Check default ship name is not empty-string");
-        REQUIRE_FALSE(testShip.getName().empty());
+    SECTION("Ships have no default names"){
+        INFO("Check default ship name is empty-string");
+        REQUIRE(testShip.getName().empty());
     }
 
-    SECTION("Ships have default size greater than 0."){
-        INFO("Check default ship size is non-zero");
-        REQUIRE_FALSE(testShip.getSize()==0);
+    SECTION("Ships have default size of 0."){
+        INFO("Check default ship size zero");
+        REQUIRE(testShip.getSize()==0);
     }
 
     SECTION("Ships can change names."){
@@ -24,33 +24,28 @@ TEST_CASE("Testing the ship class.","[ship]"){
         REQUIRE(testShip.getName() == "TestShip");
     }
     SECTION("Ships can be assigned names at creation"){
-        Ship testerShip("Tester Ship");
-        REQUIRE(testerShip.getName() == "Tester Ship");
+        Ship testConstructorOne("Test Ship");
+        REQUIRE(testConstructorOne.getName() == "Test Ship");
+        REQUIRE(testConstructorOne.getID() == 'T');
     }
-    SECTION("Ships know their position on the board"){
-        REQUIRE_FALSE(testShip.getPosition().empty());
+    SECTION("Ships can be assigned names and size at creation"){
+        Ship testConstructorTwo("Test Ship", 2);
+        REQUIRE(testConstructorTwo.getName() == "Test Ship");
+        REQUIRE(testConstructorTwo.getSize() == 2);
+        REQUIRE(testConstructorTwo.getID() == 'T');
     }
-    SECTION("Ships default to have the first position to be '1,A'"){
-        REQUIRE( testShip.getPosition(0).x == 1);
-        REQUIRE( testShip.getPosition(0).y == 'A');
-    }
-    SECTION("Ships default be positioned vertically"){
-        INFO("All x's will be 1, y's will increase from A to D");
-        REQUIRE( testShip.getPosition(0).x == 1);
-        REQUIRE( testShip.getPosition(0).y == 'A');
-        REQUIRE( testShip.getPosition(1).x == 1);
-        REQUIRE( testShip.getPosition(1).y == 'B');
-        REQUIRE( testShip.getPosition(2).x == 1);
-        REQUIRE( testShip.getPosition(2).y == 'C');
-        REQUIRE( testShip.getPosition(3).x == 1);
-        REQUIRE( testShip.getPosition(3).y == 'D');
+    SECTION("Ships can be assigned names, size, and ID at creation"){
+        Ship testConstructorThreeShip("Test Ship", 3, 'T');
+        REQUIRE(testConstructorThreeShip.getName() == "Test Ship");
+        REQUIRE(testConstructorThreeShip.getSize() == 3);
+        REQUIRE(testConstructorThreeShip.getID() == 'T');
     }
 
 }
 
 TEST_CASE("Testing the default ships for battleship"){
+    SECTION()
     PatrolBoat testPatrol;
-
     REQUIRE(testPatrol.getName() == "Patrol Boat");
     REQUIRE(testPatrol.getSize() == 2);
 

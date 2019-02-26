@@ -7,71 +7,69 @@
 
 #include <string>
 #include <vector>
-
-struct coordinate{
-    int x;
-    char y;
-};
+#include <utility>
+#include <ostream>
 
 class Ship {
 public:
-    Ship(std::string name = "Battleship", int size = 4)
-         : _name(name), _size(size){
-        _position.resize(_size);
-        for(int n = 0; n < _size; ++n){
-            coordinate newPos = { 1, static_cast<char>('A' + n)};
-            _position[n] = newPos;
-        }
+    Ship(){
+        _name = "";
+        _size = 0;
+        _id = ' ';
     }
 
-    std::string &getName() {
+    explicit Ship(std::string name): _name(std::move(name)), _size(0), _id('U'){}
+
+    explicit Ship(std::string name, int size): _name(std::move(name)), _size(size), _id(_name.at(0)){}
+
+    explicit Ship(std::string name, int size, char ID): _name(std::move(name)), _size(size), _id(ID){}
+
+    const std::string &getName() {
         return _name;
     }
     void setName(std::string  const &newName){
         _name = newName;
     }
-    int &getSize(){
+    const int &getSize(){
         return _size;
     }
-    std::vector<coordinate> getPosition() {
-        return _position;
+    const char getID(){
+        return _id;
     }
-    coordinate getPosition(int x) {
-        return _position[x];
-    }
+
 private:
     std::string _name;
     int _size;
-    std::vector<coordinate> _position;
+    char _id;
 };
 
 class PatrolBoat : public Ship{
 public:
-    PatrolBoat() : Ship("Patrol Boat", 2){
+    PatrolBoat(): Ship("Patrol Boat", 2, 'P'){
     }
 };
 
 class Submarine : public Ship{
 public:
-    Submarine() : Ship("Submarine", 3){
+    Submarine() : Ship("Submarine", 3, 'S'){
     }
 };
 
 class Destroyer : public Ship{
 public:
-    Destroyer() : Ship("Destroyer", 3){
+    Destroyer() : Ship("Destroyer", 3, 'D'){
     }
 };
 
 class Battleship : public Ship{
 public:
-    Battleship() : Ship("Battleship", 4){
+    Battleship() : Ship("Battleship", 4, 'B'){
     }
 };
 
 class Carrier : public Ship{
 public:
-    Carrier() : Ship("Carrier", 5){
+    Carrier() : Ship("Carrier", 5, 'C'){
     }
 };
 
