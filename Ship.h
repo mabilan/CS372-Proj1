@@ -46,5 +46,6 @@ private:
     std::vector<coordinate> _position;
 };
 
-
+class PatrolBoat : public Ship{
+};
 #endif //CS372_PROJ1_SHIP_H

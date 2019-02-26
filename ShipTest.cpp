@@ -43,3 +43,9 @@ TEST_CASE("Testing the ship class.","[ship]"){
     }
 
 }
+
+TEST_CASE("Testing the default ships for battleship"){
+    PatrolBoat testPatrol;
+
+    REQUIRE(testPatrol.getName() == "Patrol Boat");
+}
