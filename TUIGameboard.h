@@ -1,5 +1,6 @@
 // TUIGameboard.h
-// Created by Bryant Klug on 2/27/2019
+// Created on 2/24/2019 by Michale Bilan & Bryant Klug
+// Last Modified: 2/26/2019
 
 #ifndef TUIGAMEBOARD_INCLUDED
 #define TUIGAMEBOARD_INCLUDED

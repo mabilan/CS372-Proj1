@@ -1,5 +1,6 @@
 // TUIGameboardTest.cpp
-// Created by Bryant Klug on 2/27/2019
+// Created on 2/24/2019 by Michale Bilan & Bryant Klug
+// Last Modified: 2/26/2019
 
 #include "catch.hpp"
 #include "TUIGameboard.h"
