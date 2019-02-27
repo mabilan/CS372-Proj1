@@ -14,12 +14,7 @@
 #include "Gameboard.h"
 #include "TUIGameboard.h"
 
-enum coordinateStatus {Water, Miss, NoHitShip, HitShip};
-struct Coordinate{
-    int row;
-    int column;
-    coordinateStatus status;
-};
+enum coordinateStatus {isWater, isMiss, isShip};
 
 class Fleet {
 public:
@@ -27,22 +22,26 @@ public:
         addPlayer();
         setPlayerName("Player "+std::to_string(_numberOfPlayers));
         _shipList = defaultFleet();
+        mapInitialize();
     }
 
     explicit Fleet(std::string playerName): _playerName(std::move(playerName)){
         addPlayer();
         _shipList = defaultFleet();
+        mapInitialize();
     }
 
     explicit Fleet(Gameboard board): _fleetBoard(board){
         addPlayer();
         setPlayerName("Player " + std::to_string(_numberOfPlayers));
         _shipList = defaultFleet();
+        mapInitialize();
     }
 
     Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){
         addPlayer();
         _shipList = defaultFleet();
+        mapInitialize();
     }
 
     ~Fleet(){
@@ -73,10 +72,24 @@ public:
     const int getBoardWidth(){
         return _fleetBoard.getWidth();
     }
-    
+
     std::vector<Ship *> defaultFleet(){
         std::vector<Ship *> defaultShips {new PatrolBoat, new Submarine, new Destroyer, new Battleship, new Carrier};
         return defaultShips;
+    }
+
+    void mapInitialize(){
+        for(int i=0; i<(this->getBoardHeight()); i++){
+            std::vector<std::pair<coordinateStatus, char>> row;
+            for(int j=0; j<(this->getBoardWidth()); j++){
+                row.emplace_back(std::make_pair(isWater,' '));
+            }
+            _fleetMap.push_back(row);
+        }
+    }
+
+    std::pair<coordinateStatus, char> getCoordinateStatus(const int row, const int column){
+        return _fleetMap[row][column];
     }
 
     void drawGame(){
@@ -88,6 +101,7 @@ private:
     Gameboard _fleetBoard;
     std::vector<Ship *> _shipList;
     TUIGameboard _fleetTUI;
+    std::vector<std::vector<std::pair<coordinateStatus, char>>> _fleetMap;
 
     static int _numberOfPlayers;
 };

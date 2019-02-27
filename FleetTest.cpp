@@ -70,6 +70,11 @@ TEST_CASE("Tests for Battleship Game Fleets"){
             REQUIRE(testFleet.getBoardWidth() == 10);
         }
     }
+
+    SECTION("Fleet default coordinates should be empty/water"){
+        Fleet testFleet;
+    }
+
     SECTION("Fleet can draw itself"){
         Fleet testFleet;
         testFleet.drawGame();
