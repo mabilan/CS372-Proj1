@@ -22,3 +22,24 @@
 2/26 ~2 hours
  - made the fleet draw the gameboard
  - added ability to scale the gameboard
+ - refactor tui gameboard
+
+2/26 ~3 hours
+ - made the main function for the game
+ - ask players for their names
+ - initialize the boards for the player
+ - print player 1's board on to the screen
+ - make the board human readable (coordinate system)
+ 
+ General thoughts
+ ---------------------
+ It was hard to do proper tdd. I always wanted to write code before writing a test.
+ I rarely was able to write just enough code to get it to pass the test. I was always thinking about
+ how to make the code modular and how it was going to interact with code in the future. 
+ 
+ It is hard to fit in time to program after work. Which can be seen in the infrequent 
+ work at the beginning of the project.
+ 
+ Pair programming was interesting. When we pair programmed the code was better, and we both were on the same page.
+ For the things we programmed separately, I think it took longer and it needed more refactoring.
+ 
