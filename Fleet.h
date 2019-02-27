@@ -9,12 +9,18 @@
 #include "Gameboard.h"
 #include <string>
 #include <utility>
+#include <vector>
 
 class Fleet {
 public:
     Fleet(){
         addPlayer();
         setPlayerName("Player "+std::to_string(_numberOfPlayers));
+        _shipList.push_back(new PatrolBoat);
+        _shipList.push_back(new Submarine);
+        _shipList.push_back(new Destroyer);
+        _shipList.push_back(new Battleship);
+        _shipList.push_back(new Carrier);
     }
 
     Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){}
@@ -37,9 +43,14 @@ public:
     const std::string getPlayerName(){
         return _playerName;
     }
+
+    const int fleetSize(){
+        return _shipList.size();
+    }
 private:
     std::string _playerName;
     Gameboard _fleetBoard;
+    std::vector<Ship *> _shipList;
 
     static int _numberOfPlayers;
 };

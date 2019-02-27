@@ -20,4 +20,9 @@ TEST_CASE("Tests for Battleship Game Fleets"){
         REQUIRE(testFleet1.getPlayerName() == "Player 1");
         REQUIRE(testFleet2.getPlayerName() == "Player 2");
     }
+
+    SECTION("Default fleet has 5 ships"){
+        Fleet testFleet;
+        REQUIRE(testFleet.fleetSize() == 5);
+    }
 }
