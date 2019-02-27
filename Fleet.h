@@ -11,6 +11,7 @@
 #include <utility>
 #include <vector>
 
+
 class Fleet {
 public:
     Fleet(){
@@ -45,34 +46,28 @@ public:
     void removePlayer(){
         _numberOfPlayers -= 1;
     }
-
     void setPlayerName(std::string playerName){
         _playerName = std::move(playerName);
     }
-
     const std::string getPlayerName(){
         return _playerName;
     }
-
     const int fleetSize(){
         return _shipList.size();
+    }
+    const char getShipID(int index){
+        return _shipList[index] -> getID();
+    }
+    const int getBoardHeight(){
+        return _fleetBoard.getHeight();
+    }
+    const int getBoardWidth(){
+        return _fleetBoard.getWidth();
     }
 
     std::vector<Ship *> defaultFleet(){
         std::vector<Ship *> defaultShips {new PatrolBoat, new Submarine, new Destroyer, new Battleship, new Carrier};
         return defaultShips;
-    }
-
-    const char getShipID(int index){
-        return _shipList[index] -> getID();
-    }
-
-    const int getBoardHeight(){
-        return _fleetBoard.getHeight();
-    }
-
-    const int getBoardWidth(){
-        return _fleetBoard.getWidth();
     }
 private:
     std::string _playerName;
