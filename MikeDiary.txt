@@ -13,13 +13,24 @@
 	- Started building Ship class to pass tests
 - Learned how to fix/undo bad git commits
 
-13 Feb 2019 [Approx. 1 hr]
+13 Feb 2019 [Approx. 1 hrs]
 - Generalize member defaults for ship class
 - Add default constructor for Ship
 - Refactor tests for member defaults
 
-26 Feb 2019 [Approx. 1.5 hrs]
+26 Feb 2019 [Approx. 2.5 hrs]
 - Revised tests for ship base class per developer discussions
+    - Closed related issue
 - Revised ship base class to pass refactored tests
 - Added new tests for varying constructors
 - Revised ship class to pass new constructor tests
+
+26 Feb 2019 [Approx. 3.5 hrs]
+- Refactored tests for all ship derived classes
+- Fixed a few errors that unit tests caught
+- Added tests and refactored code for Gameboard
+- Added Fleet class and tests
+- Fixed issue in Ship.h that popped up when attempting to make Fleet tests
+- Added more tests and code to pass tests for Fleets
+    - Default play name scheme
+    - Default shipList ("Base" game)

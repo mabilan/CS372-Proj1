@@ -52,7 +52,7 @@ public:
     const char getShipID(int index){
         return _shipList[index] -> getID();
     }
-    
+
 private:
     std::string _playerName;
     Gameboard _fleetBoard;
