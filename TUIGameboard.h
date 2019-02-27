@@ -10,7 +10,10 @@
 class TUIGameboard{
 public:
     std::string draw( int height, int width){
-        std::string board;
+
+        if(!_board.empty()){
+            return _board;
+        }
         std::string row_line;
         std::string row_temp;
 
@@ -20,7 +23,7 @@ public:
         row_temp = "|   |   |   |   |   |   |   |   |   |   |\n";
 
         for(int i = 0; i < height; ++i){
-            board.append(row_line);
+            _board.append(row_line);
             row_temp.clear();
             for(int j = 0; j < width; ++j){
                 row_temp.append("| ");
@@ -28,35 +31,15 @@ public:
                 row_temp.append(" ");
             }
             row_temp.append("|\n");
-            board.append(row_temp);
+            _board.append(row_temp);
         }
-        board.append(row_line);
+        _board.append(row_line);
 
-        return board;
+        return _board;
     }
 
 private:
-    std::string tuiboard = "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------"
-                           "|   |   |   |   |   |   |   |   |   |   |"
-                           "-----------------------------------------";
+    std::string _board;
 };
 
 #endif

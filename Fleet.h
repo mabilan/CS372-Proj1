@@ -5,11 +5,14 @@
 #ifndef CS372_PROJ1_FLEET_H
 #define CS372_PROJ1_FLEET_H
 
-#include "Ship.h"
-#include "Gameboard.h"
 #include <string>
 #include <utility>
 #include <vector>
+#include <iostream>
+
+#include "Ship.h"
+#include "Gameboard.h"
+#include "TUIGameboard.h"
 
 class Fleet {
 public:
@@ -74,10 +77,16 @@ public:
     const int getBoardWidth(){
         return _fleetBoard.getWidth();
     }
+
+    void drawGame(){
+        std::cout << _fleetTUI.draw(getBoardHeight(), getBoardWidth());
+    }
+
 private:
     std::string _playerName;
     Gameboard _fleetBoard;
     std::vector<Ship *> _shipList;
+    TUIGameboard _fleetTUI;
 
     static int _numberOfPlayers;
 };

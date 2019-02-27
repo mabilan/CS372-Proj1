@@ -70,5 +70,9 @@ TEST_CASE("Tests for Battleship Game Fleets"){
             REQUIRE(testFleet.getBoardWidth() == 10);
         }
     }
+    SECTION("Fleet can draw itself"){
+        Fleet testFleet;
+        testFleet.drawGame();
+    }
 }
 
