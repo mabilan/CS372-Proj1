@@ -55,5 +55,20 @@ TEST_CASE("Tests for Battleship Game Fleets"){
             REQUIRE(testFleet.getBoardWidth() == 10);
         }
     }
+
+    SECTION("Fleet constructors with player name"){
+        SECTION("Single parameter constructor"){
+            Fleet testFleet("TestName");
+            REQUIRE(testFleet.getPlayerName() == "TestName");
+            REQUIRE(testFleet.getBoardHeight() == testFleet.getBoardWidth());
+        }
+        SECTION("Two parameter constructor"){
+            Gameboard rectangleBoard(5,10);
+            Fleet testFleet("TestName", rectangleBoard);
+            REQUIRE(testFleet.getPlayerName() == "TestName");
+            REQUIRE(testFleet.getBoardHeight() == 5);
+            REQUIRE(testFleet.getBoardWidth() == 10);
+        }
+    }
 }
 

@@ -32,6 +32,7 @@ public:
 
     Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){
         addPlayer();
+        _shipList = defaultFleet();
     }
 
     ~Fleet(){
