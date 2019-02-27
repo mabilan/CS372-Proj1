@@ -11,7 +11,14 @@
  - Added positioning to ships
  - created the Gameboard class
 
-2/27 ~2 hours
+2/25 ~2 hours
  - Add battleship standard ship classes
  - made gameboard resizeable
  - made tui gameboard
+
+2/26 ~1 hour
+ - Planned organization of the ships, gameboard, and drawing
+
+2/26 ~2 hours
+ - made the fleet draw the gameboard
+ - added ability to scale the gameboard

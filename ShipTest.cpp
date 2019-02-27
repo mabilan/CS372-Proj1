@@ -43,7 +43,7 @@ TEST_CASE("Testing the ship class.","[ship]"){
 
 }
 
-TEST_CASE("Testing all derived ship classes") {
+TEST_CASE("Testing all derived ship classes", "[Derived Ships]") {
     SECTION("Testing Patrol Boat") {
         PatrolBoat testPatrol;
         REQUIRE(testPatrol.getName() == "Patrol Boat");

@@ -6,6 +6,9 @@
 #define TUIGAMEBOARD_INCLUDED
 
 #include <string>
+#include <vector>
+
+#include "Ship.h"
 
 class TUIGameboard{
 public:
@@ -20,7 +23,6 @@ public:
         row_line.assign(4 * width + 1, '-');
         row_line.append(1u,'\n');
 
-        row_temp = "|   |   |   |   |   |   |   |   |   |   |\n";
 
         for(int i = 0; i < height; ++i){
             _board.append(row_line);
@@ -35,6 +37,12 @@ public:
         }
         _board.append(row_line);
 
+        return _board;
+    }
+    std::string update(int posX, int posY, std::string newChar){
+        int location = 2 * 42 * posY - 42 + posX * 4 - 2;
+
+        _board.replace(location, 1, newChar);
         return _board;
     }
 
