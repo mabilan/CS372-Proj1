@@ -5,7 +5,7 @@
 #include "catch.hpp"
 #include "TUIGameboard.h"
 
-TEST_CASE("The Gameboard has a physical representation"){
+TEST_CASE("The Gameboard has a physical representation", "[TUI]"){
 
     TUIGameboard testBoard;
 

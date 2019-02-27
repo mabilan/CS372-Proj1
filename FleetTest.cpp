@@ -5,7 +5,7 @@
 #include "catch.hpp"
 #include "Fleet.h"
 
-TEST_CASE("Tests for Battleship Game Fleets"){
+TEST_CASE("Tests for Battleship Game Fleets", "[fleet]"){
     SECTION("Can make a fleet"){
         Fleet testFleet;
     }
