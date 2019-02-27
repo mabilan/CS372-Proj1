@@ -16,11 +16,7 @@ public:
     Fleet(){
         addPlayer();
         setPlayerName("Player "+std::to_string(_numberOfPlayers));
-        _shipList.push_back(new PatrolBoat);
-        _shipList.push_back(new Submarine);
-        _shipList.push_back(new Destroyer);
-        _shipList.push_back(new Battleship);
-        _shipList.push_back(new Carrier);
+        _shipList = defaultFleet();
     }
 
     Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){}
@@ -47,6 +43,16 @@ public:
     const int fleetSize(){
         return _shipList.size();
     }
+
+    std::vector<Ship *> defaultFleet(){
+        std::vector<Ship *> defaultShips {new PatrolBoat, new Submarine, new Destroyer, new Battleship, new Carrier};
+        return defaultShips;
+    }
+
+    const char getShipID(int index){
+        return _shipList[index] -> getID();
+    }
+    
 private:
     std::string _playerName;
     Gameboard _fleetBoard;

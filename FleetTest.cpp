@@ -25,4 +25,14 @@ TEST_CASE("Tests for Battleship Game Fleets"){
         Fleet testFleet;
         REQUIRE(testFleet.fleetSize() == 5);
     }
+
+    SECTION("Default ships have unique IDs"){
+        Fleet testFleet;
+        REQUIRE(testFleet.getShipID(0) == 'P');
+        REQUIRE(testFleet.getShipID(1) == 'S');
+        REQUIRE(testFleet.getShipID(2) == 'D');
+        REQUIRE(testFleet.getShipID(3) == 'B');
+        REQUIRE(testFleet.getShipID(4) == 'C');
+    }
 }
+
