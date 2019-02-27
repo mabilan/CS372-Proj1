@@ -34,5 +34,11 @@ TEST_CASE("Tests for Battleship Game Fleets"){
         REQUIRE(testFleet.getShipID(3) == 'B');
         REQUIRE(testFleet.getShipID(4) == 'C');
     }
+
+    SECTION("Default fleets use a default gameboard"){
+        Fleet testFleet;
+        REQUIRE(testFleet.getBoardHeight() == 10);
+        REQUIRE(testFleet.getBoardWidth() == 10);
+    }
 }
 
