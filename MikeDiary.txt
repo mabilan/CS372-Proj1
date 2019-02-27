@@ -34,3 +34,7 @@
 - Added more tests and code to pass tests for Fleets
     - Default play name scheme
     - Default shipList ("Base" game)
+
+26 Feb 2019 [Approx. 30 min]
+- Added Fleet tests for checking constructors
+- Add code to pass new Fleet tests
