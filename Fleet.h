@@ -19,7 +19,20 @@ public:
         _shipList = defaultFleet();
     }
 
-    Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){}
+    explicit Fleet(std::string playerName): _playerName(std::move(playerName)){
+        addPlayer();
+        _shipList = defaultFleet();
+    }
+
+    explicit Fleet(Gameboard board): _fleetBoard(board){
+        addPlayer();
+        setPlayerName("Player " + std::to_string(_numberOfPlayers));
+        _shipList = defaultFleet();
+    }
+
+    Fleet(std::string playerName, Gameboard board): _playerName(std::move(playerName)), _fleetBoard(board){
+        addPlayer();
+    }
 
     ~Fleet(){
         removePlayer();
@@ -53,6 +66,13 @@ public:
         return _shipList[index] -> getID();
     }
 
+    const int getBoardHeight(){
+        return _fleetBoard.getHeight();
+    }
+
+    const int getBoardWidth(){
+        return _fleetBoard.getWidth();
+    }
 private:
     std::string _playerName;
     Gameboard _fleetBoard;

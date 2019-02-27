@@ -40,5 +40,20 @@ TEST_CASE("Tests for Battleship Game Fleets"){
         REQUIRE(testFleet.getBoardHeight() == 10);
         REQUIRE(testFleet.getBoardWidth() == 10);
     }
+
+    SECTION("Fleet gameboard properly varies with gameboard changes"){
+        SECTION("Square board"){
+            Gameboard squareBoard(5);
+            Fleet testFleet(squareBoard);
+            REQUIRE(testFleet.getBoardHeight() == 5);
+            REQUIRE(testFleet.getBoardWidth() == 5);
+        }
+        SECTION("Non-square rectangular board"){
+            Gameboard rectangleBoard(5,10);
+            Fleet testFleet(rectangleBoard);
+            REQUIRE(testFleet.getBoardHeight() == 5);
+            REQUIRE(testFleet.getBoardWidth() == 10);
+        }
+    }
 }
 
