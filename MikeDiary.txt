@@ -35,6 +35,9 @@
     - Default play name scheme
     - Default shipList ("Base" game)
 
-26 Feb 2019 [Approx. 30 min]
+26 Feb 2019 [Approx. 2.5 hrs]
 - Added Fleet tests for checking constructors
 - Add code to pass new Fleet tests
+- Started work on defining coordinate system
+    - Raised more questions, like how we want to manage states
+- "Paired" programming w/ Bryant via chat
