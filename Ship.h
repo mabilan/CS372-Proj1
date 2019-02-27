@@ -8,7 +8,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <ostream>
 
 class Ship {
 public:
