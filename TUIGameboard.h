@@ -23,7 +23,6 @@ public:
         row_line.assign(4 * width + 1, '-');
         row_line.append(1u,'\n');
 
-        row_temp = "|   |   |   |   |   |   |   |   |   |   |\n";
 
         for(int i = 0; i < height; ++i){
             _board.append(row_line);

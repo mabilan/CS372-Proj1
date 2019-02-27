@@ -4,3 +4,5 @@ project(CS372-Proj1)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(CS372-Proj1 Test.cpp ShipTest.cpp GameboardTest.cpp TUIGameboardTest.cpp FleetTest.cpp Fleet.h)
+
+add_executable(StartBattleship Game.cpp)
