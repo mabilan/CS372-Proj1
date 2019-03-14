@@ -10,9 +10,9 @@ All contributors will track and update their project contributions via the share
 
 We have decided to use a free 30-day trial of LeanKit to track and plan project progress. Users may request read-access to the board.
 
-### LeanKit Project Planning
+### LeanKit Project Planning (Trial Expired, board unavailable)
 
-* [Battleship Project](https://uafcs372.leankit.com/board/795166944) - our planning board for this project
+* [Battleship Project] - our planning board for this project
 
 ### Authors
 
